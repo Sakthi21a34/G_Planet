@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:white;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #004080;
+    
+    color: #fff;
+}
+
+.logo img{
+    width: 150px;
+    height: 70px;
+    border-radius: 15px;
+    border: 2px solid white;
+    animation: blink 3s steps(5, start) infinite;
+}
+
+@keyframes blink {
+
+    0%, 100%{
+        box-shadow: 0 0 20px rgba(225, 225, 225, 0);
+    }
+    50% {
+
+        box-shadow: 0 0 20px rgba(225, 225, 225, 5);
+
+    }
+
+
+}
+
+.gameimg{
+    border-radius: 25px;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(225, 225, 225, 0.5);
+}
+.hero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #004080;
+}
+.hero p {
+    color: #333;
+}
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.card {
+    background-color: rgba(225, 225, 225, 0.5);
+    padding: 1rem;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    flex: 1 0 30%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+.card h2 {
+    font-size: 1.5rem;
+    color: #004080;
+}
+.card p {
+    padding: 10px;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #004080;
+    color: #fff;
+}
+.c1 {
+    background-color: #004080;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.content {
+    padding: 15px;
+}
+.buttons a {
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+
+#searchInput {
+    width: 200px;
+}
+
+@media (max-width: 500px) {
+    #searchInput {
+        width: 80px;
+    }
+    .logo img {
+        width: 100px;
+    }
+    #searchBtn {
+        display: none;
+    }
+}
+
+#view{
+    background-color: #004080;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#gamename{
+    font-size: large;
+    color: #004080;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+#view:hover{
+    background-color: white;
+    color: #004080;
+    border: 1px solid #004080;
+}
+
+
+.install:hover{
+    
+    background-color: #004080;
+    color: white;
+    border-radius: 15px;
+}
+
+/* typing Effect */
+
+
+.typing-container {
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-text::before{
+    content: "G-Planet!";
+    display: inline-block;
+    animation: typing 5s steps(30, end), step-end infinite;
+}
+
+.typing-container:hover{
+    color: red;
+}
+
+@keyframes typing {
+    0% { content: "G-Planet!"; }
+    10% { content: "G-Planet!"; }
+    20% { content: "Ga-Planet!"; }
+    30% { content: "Gam-Planet!"; }
+    40% { content: "Gami-Planet!"; }
+    50% { content: "Gamin-Planet!"; }
+    60% { content: "Gaming-Planet!"; }
+    70% { content: "Gamin-Planet!"; }
+    80% { content: "Gami-Planet!"; }
+    90% { content: "Gam-Planet!"; }
+    100% { content: "Ga-Planet!"; }
+}

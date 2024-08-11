@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="view.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:white;
+            margin: 0;
+            padding: 0;
+            background-image: url(bg5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #004080;
+            color: #fff;
+        }
+
+        .logo img{
+             width: 150px;
+             height: 70px;
+             border-radius: 15px;
+             border: 2px solid white;
+        }
+
+        
+
+        .hero {
+            text-align: center;
+            padding: 2rem;
+            background-color: #e0e0e0;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #004080;
+        }
+        .hero p {
+            color: #333;
+        }
+        .card-deck {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+        .card {
+            background: url(bg.jpg);
+            padding: 1rem;
+            border-radius: 55px;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            flex: 1 0 30%;
+            box-sizing: border-box;
+            border:5px solid white;
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            color: #004080;
+        }
+        .card p {
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #004080;
+            color: #fff;
+        }
+        .c1 {
+            background-color: #004080;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: 15px;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="logo"><img src="logo3.jpg" alt="Logo"></div>
+            <div class="d-flex align-items-center dropdown">
+                <input type="text" id="searchInput" placeholder="Search..." style="border-radius: 10px; margin-right: 10px;" onkeyup="filterFunction()">
+                <button id="searchBtn" style="border-radius: 10px; color: white; background-color: #004080;" onclick="searchFunction()">Search</button>
+                <div id="dropdown" class="dropdown-content"></div>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="online.html">Online</a></li>
+                        <li class="nav-item"><a class="nav-link" href="offline.html">Offline</a></li>
+                        <li class="nav-item"><a class="nav-link" href="trial.html">Trial</a></li>
+                    </ul>
+                    <div class="nav-item">
+                        <button style="border-radius: 10px; color: white; background-color:red;">
+                            <a class="nav-link" href="index.html">
+                                Logout</a>
+                            </button>
+                        </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Online Games</h1><br>
+        <p>Connect with players worldwide and dive into thrilling multiplayer battles and adventures. Enjoy real-time gameplay and join our vibrant gaming community!</p>
+    </section>
+
+    
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                    <img src="cl.jpg" alt="Game Image" class="gameimg">
+                    <p class="gamename">Cricket League</p>
+                    <a href="cl.html"><b id="view" >View</b></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <img src="carrom.jpg" alt="Game Image" class="gameimg">
+                <p class="gamename">Carrom</p>
+                <a href="carrom.html"><b id="view">View</b></a>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="ms.jpg" alt="Game Image" class="gameimg">
+                    <p class="gamename">Modern Strike</p>
+                    <a href="ms.html"><b id="view">View</b></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="ff.jpg" alt="Game Image" class="gameimg">
+                    <p class="gamename">Free Fire</p>
+                    <a href="ff.html"><b id="view">View</b></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="lm.jpg" alt="Game Image" class="gameimg">
+                    <p class="gamename">Lords Mobile</p>
+                    <a href="lm.html"><b id="view">View</b></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="marvel.jpg" alt="Game Image" class="gameimg">
+                    <p class="gamename">MARVEL Fight</p>
+                    <a href="marvel.html"><b id="view">View</b></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="bmi.jpg" alt="Game Image" class="gameimg">
+                    <p class="gamename">Battlegrounds of India</p>
+                    <a href="bmi.html"><b id="view">View</b></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="castle.jpg" alt="Game Image" class="gameimg">
+                    <p class="gamename">Castle Crush</p>
+                    <a href="castle.html"><b id="view">View</b></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="mini.jpg" alt="Game Image" class="gameimg">
+                    <p class="gamename">Mini Militia</p>
+                    <a href="mini.html"><b id="view">View</b></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+
+    <footer>
+        <nav>
+            <a href="home.html" style="text-decoration: none; color: white;">Home</a><span> | </span>
+            <a href="online.html" style="text-decoration: none; color: white;">Online</a><span> | </span>
+            <a href="offline.html" style="text-decoration: none; color: white;">Offline</a><span> | </span>
+            <a href="contact.html" style="text-decoration: none; color: white;">Contact</a>
+        </nav>
+    </footer>
+</body>
+</html>
