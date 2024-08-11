@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(bg5.jpg);
+            background-size: cover;
+        }
+
+        header {
+            background-color: slateblue;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card-header {
+            background-color: slateblue;
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: slateblue;
+            border-color: slateblue;
+            color: white;
+        }
+
+        .btn {
+            background-color: #004080;;
+            border: 1px solid white;
+            color: white;
+            position: absolute;
+            top: 10px;
+            padding: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <h1>Contact Us</h1>
+        <a href="home.html" class="btn">Home</a>
+    </header>
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-white">
+                        <h2>Feedback</h2>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-block"><a href="home.html" style="text-decoration: none; color: white;">Submit</a></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="bootstrap.bundle.js"></script>
+</body>
+</html>

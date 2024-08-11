@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Success</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="install.css">
+</head>
+<body>
+    <header>
+        <h1>Gaming Planet</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="typing-container">
+                <span class="typing-text"></span>
+            </div>
+            <h2 id="text">Downloading Started<progress id="progress" value="20" max="100">100%</progress></h2>
+            <p style="margin: 0px; padding: 0px;" class="text2"></p>
+                <p style="margin: 0px; padding: 0px;" class="text3">ready to play.</p>
+            <a href="home.html" class="btn btn-custom">Go to Home</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="text-align: center; margin-bottom: 30px;">
+                <button id="btn5"><a href="home.html" style="text-decoration: none;">Popular Games</a></button>
+            </div>
+
+            
+
+            <div class="row">
+          
+                <div class="gamecard" style="margin-left: 225px;">
+                    <a href="ff.html"><img src="ff0.jpg" alt="image"  style=" width: 200px; height: 100px;" ;
+                        height: 100px;></a>
+                </div>
+
+                <div class="gamecard">
+                    <a href="bmi.html"><img src="bgmi0.jpg" alt="image"  style=" width: 200px; height: 100px;" ;
+                        height: 100px;></a>
+                </div>
+
+                <div class="gamecard">
+                    <a href="zombie.html"><img src="zombie0.jpg" alt="image"  style=" width: 200px; height: 100px;" ;
+                        height: 100px;></a>
+                </div>
+
+                <div class="gamecard">
+                    <a href="marvel.html"><img src="marvel0.jpg" alt="image"  style=" width: 200px; height: 100px;" ;
+                        height: 100px;></a>
+                </div>
+
+                <div class="gamecard">
+                    <a href="ms.html"><img src="ms0.jpg" alt="image"  style=" width: 200px; height: 100px;" ;
+                        height: 100px;></a>
+                </div>
+
+            
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Game Store. All rights reserved.</p>
+    </footer>
+
+    <script src="bootstrap.bundle.min.js"></script>
+
+    <script>
+        
+        var progress = document.getElementById("progress");
+
+        function updateProgress() {
+            progress.value = progress.value + 20;
+        }
+
+        setInterval(updateProgress, 1000);
+        function changeText() {
+            document.getElementById("text").innerHTML = "Installing..";
+            document.getElementsByClassName("text2")[0].innerHTML = "Please wait while we install your game"
+            document.getElementsByClassName("text3")[0].innerHTML = ""
+        }
+
+        setTimeout(changeText, 4000);
+
+        function changeText2() {
+            document.getElementById("text").innerHTML = "Installation Successful!";
+            document.getElementsByClassName("text2")[0].innerHTML = "Your game has been successfully installed"
+            
+        }
+
+        setTimeout(changeText2, 8000);
+    </script>
+</body>
+</html>
